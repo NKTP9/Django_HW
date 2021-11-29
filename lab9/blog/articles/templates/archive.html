@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/articles.css">
+    <title>Архив статей</title>
+</head>
+
+<body>
+<div class="header">
+    <img class="logo" src="{% static 'images/banner.jpg' %}" alt=""/>
+    <div class="header-text-area">
+        <h1 class="service-title">Коллективный блог</h1>
+        <h2>
+            <a href="/login/" class="register-link">Вход</a> <br>
+            <a href="/register/" class="register-link">Регистрация</a> <br>
+            <a href="/logout/" class="register-link">Выход</a> <br>
+            <a href="/article/new" class="register-link>">Создать статью</a>
+        </h2><br>
+
+    </div>
+    <div class="icons-for-parallax">
+        <img class="icon-for-parallax-first"
+             src="{% static 'images/icon_parallax.png' %}">
+        <img class="icon-for-parallax-second"
+             src="{% static 'images/icon_parallax.png' %}">
+        <img class="icon-for-parallax-third"
+             src="{% static 'images/icon_parallax.png' %}">
+    </div>
+</div>
+<div class="archive">
+    {% for post in posts %}
+    <div class="one-post">
+        <h2 class="post-title">
+            <a href="http://127.0.0.1:8000/article/{{post.id}}">{{post.title}}</a>
+        </h2>
+        <div class="fold-button">Свернуть</div>
+        <div class="article-info">
+            <div class="article-author">{{post.author.username}}</div>
+            <div class="article-created-date">{{post.created_date}}</div>
+        </div>
+        <p class="article-text">{{post.text_excerpt}}</p>
+        <div class="one-post-shadow"></div>
+    </div>
+    {% endfor %}
+</div>
+
+<script src="{% static 'js/helloworld.js' %}"></script>
+<script src="{% static 'js/fold-post.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/highlight-post.js' %}"></script>
+<script src="{% static 'js/parallax.js' %}"></script>
+</body>
+
+</html>

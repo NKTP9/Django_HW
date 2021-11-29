@@ -1,0 +1,106 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.header img[class="logo"] {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    width: 960px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #83bbe3;
+}
+
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-title a {
+    color: #ffffff;
+}
+
+.links {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a {
+    color: #ffffff;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    text-align: right;
+}
+.h2 {
+    color:#ffffff;
+    font-size:16px;
+    padding:5px;
+}
+.one-post.folded .article-info {
+    /* данный стиль применится только для элементов класса
+    .article-author, у которых родитель с классом one-post
+    имеет также класс folded */
+    display: none;
+}
+.one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: -1; /* отодвигает элемент на задний план */
+    opacity: 0;
+}
+.header-text-area {
+    color: aliceblue;
+    margin-top: 100px;
+    float:left;
+}
+
+.icons-for-parallax {
+    margin-top: 20px;
+    margin-left: 600px;
+    margin-bottom: 50px;
+    height: 400px;
+    position: relative;
+}
+.icons-for-parallax img {
+    /* здесь находятся общие для всех картинок стили */
+    position: absolute;
+    top: 0;
+}
+.icon-for-parallax-first {
+    width: 200px;
+    margin-top: 200px;
+    z-index: 3; /* эта картинка на переднем плане, у неё больший z-index
+*/
+}
+.icon-for-parallax-second {
+    width: 175px; /* уменьшить ширину для картинки, чтобы визуально */
+    /* находилась дальше для пользователя */
+    margin-top: 100px; /* эта картинка слегка смещена вправо и вниз */
+    margin-left: 80px; /* за счет левой и верхней границ */
+    z-index: 2;
+}
+.icon-for-parallax-third{
+    width: 150px;
+    margin-left: 160px;
+    z-index: 1; /* эта картинка на заднем плане, у неё меньший z-index */
+}
